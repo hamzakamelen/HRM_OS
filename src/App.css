@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,9 @@
   to {
     transform: rotate(360deg);
   }
+} */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&family=Poppins&display=swap');
+.drawertext{
+  font-family: 'Poppins', sans-serif;
+  font-size: 10;
 }
