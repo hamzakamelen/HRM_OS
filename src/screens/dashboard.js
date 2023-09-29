@@ -37,6 +37,41 @@ import ToggleOnOutlinedIcon from '@mui/icons-material/ToggleOnOutlined';
 import DonutSmallOutlinedIcon from '@mui/icons-material/DonutSmallOutlined';
 import FormatListBulletedOutlinedIcon from '@mui/icons-material/FormatListBulletedOutlined';
 import DoneOutlinedIcon from '@mui/icons-material/DoneOutlined';
+import Account from './Accounts/Account';
+import NewTransaction from './Accounts/NewTransaction';
+import TransactionList from './Accounts/TransactionList';
+import Announcement from './Announcement/Announcement';
+import MyAttendance from './Attendance/MyAttendance';
+import Attendance from './Attendance/Attendance';
+import Award from './Awards/Award';
+import NewAward from './Awards/NewAward';
+import Status from './Employment/Status';
+import BalanceSheet from './Finance Report/BalanceSheet';
+import IncomeStatement from './Finance Report/IncomeStatement';
+import TrialBalance from './Finance Report/TrialBalance';
+import Department from './HR/Department';
+import Designation from './HR/Designation';
+import EmployeeList from './HR/EmployeeList';
+import NewEmployee from './HR/NewEmployee';
+import RoleAndPermission from './HR/RoleAndPermission';
+import LeaveStatus from './Leave/LeaveStatus';
+import MyLeaves from './Leave/MyLeaves';
+import NewLeave from './Leave/NewLeave';
+import LeavePolicy from './Leave Policy/LeavePolicy';
+import CalculatePayroll from './Payroll/CalculatePayroll';
+import PayslipList from './Payroll/PayslipList';
+import AddMilestone from './Project/AddMilestone';
+import AddProject from './Project/AddProject';
+import AddTaskStatus from './Project/AddTaskStatus';
+import AllProject from './Project/AllProject';
+import TaskPriority from './Project/TaskPriority';
+import Team from './Project/Team';
+import CompanySettings from './Setting/CompanySettings';
+import Shift from './Shift/Shift';
+import { Route, Routes, useNavigate } from 'react-router-dom';
+import Admindashboard from './Admindashboard/admindashboard.js';
+import PublicHoliday from './Holiday/PublicHoliday';
+import WeeklyHoliday from './Holiday/WeeklyHoliday';
 
 
 const drawerWidth = 250;
@@ -49,6 +84,7 @@ function ResponsiveDrawer(props) {
   const Pages = [
     {
       name: "Dashboard",
+      route: 'dashboard',
       icon: <HomeOutlinedIcon />,
     },
     {
@@ -58,27 +94,27 @@ function ResponsiveDrawer(props) {
         {
           name: "New Employee",
           icon: <GroupOutlinedIcon />,
-          route: "abc"
+          route: "NewEmployee"
         },
         {
           name: "Employee List",
           icon: <GroupOutlinedIcon />,
-          route: "abc"
+          route: "EmployeeList"
         },
         {
-          name: "Roll & Permissions",
+          name: "Role & Permissions",
           icon: <ManageAccountsOutlinedIcon />,
-          route: "abc"
+          route: "RoleAndPermission"
         },
         {
           name: "Designation",
           icon: <ManageAccountsOutlinedIcon />,
-          route: "abc"
+          route: "Designation"
         },
         {
           name: "Department",
           icon: <ManageAccountsOutlinedIcon />,
-          route: "abc"
+          route: "Department"
         },
       ],
     },
@@ -89,12 +125,12 @@ function ResponsiveDrawer(props) {
         {
           name: "Attendance",
           icon: <ArticleOutlinedIcon />,
-          route: "abc"
+          route: "Attendance"
         },
         {
           name: "My Attendance",
           icon: <ArticleOutlinedIcon />,
-          route: "abc"
+          route: "MyAttendance"
         }
       ],
     },
@@ -105,12 +141,12 @@ function ResponsiveDrawer(props) {
         {
           name: "Calculate Payroll",
           icon: <ArticleOutlinedIcon />,
-          route: "abc"
+          route: "CalculatePayroll"
         },
         {
           name: "Payslip List",
           icon: <DescriptionOutlinedIcon />,
-          route: "abc"
+          route: "PayslipList"
         }
       ],
     },
@@ -121,7 +157,7 @@ function ResponsiveDrawer(props) {
         {
           name: "Shift",
           icon: <ArticleOutlinedIcon />,
-          route: "abc"
+          route: "Shift"
         }
       ],
     },
@@ -132,7 +168,7 @@ function ResponsiveDrawer(props) {
         {
           name: "Status",
           icon: <ArticleOutlinedIcon />,
-          route: "abc"
+          route: "Employement/Status"
         },
       ],
     },
@@ -143,17 +179,17 @@ function ResponsiveDrawer(props) {
         {
           name: "New Leave",
           icon: <ToggleOnOutlinedIcon />,
-          route: "abc"
+          route: "NewLeave"
         },
         {
           name: "Leave Status",
           icon: <ArticleOutlinedIcon />,
-          route: "abc"
+          route: "LeaveStatus"
         },
         {
           name: "My Leave",
           icon: <ArticleOutlinedIcon />,
-          route: "abc"
+          route: "MyLeaves"
         },
       ],
     },
@@ -164,12 +200,12 @@ function ResponsiveDrawer(props) {
         {
           name: "Weekly Holiday",
           icon: <DonutSmallOutlinedIcon />,
-          route: "abc"
+          route: "Holiday/WeeklyHoliday"
         },
         {
           name: "Public Holiday",
           icon: <DonutSmallOutlinedIcon />,
-          route: "abc"
+          route: "Holiday/PublicHoliday"
         }
       ],
     },
@@ -180,7 +216,7 @@ function ResponsiveDrawer(props) {
         {
           name: "Leave Policy",
           icon: <DonutSmallOutlinedIcon />,
-          route: "abc"
+          route: "LeavePolicy"
         }
       ],
     },
@@ -191,7 +227,7 @@ function ResponsiveDrawer(props) {
         {
           name: "Announcement",
           icon: <EmojiFlagsOutlinedIcon />,
-          route: "abc"
+          route: "Announcement"
         }
       ],
     },
@@ -202,38 +238,38 @@ function ResponsiveDrawer(props) {
         {
           name: "Account",
           icon: <FormatListBulletedOutlinedIcon />,
-          route: "abc"
+          route: "Account"
         },
         {
           name: "New Transaction",
           icon: <DoneOutlinedIcon />,
-          route: "abc"
+          route: "Accounts/NewTransaction"
         },
         {
           name: "Transaction List",
           icon: <FormatListBulletedOutlinedIcon />,
-          route: "abc"
+          route: "Accounts/TransactionList"
         },
       ],
     },
     {
-      name: "FINANCEREPORT",
+      name: "FINANCE REPORT",
       icon: <EmojiFlagsOutlinedIcon />,
       children: [
         {
           name: "Trail Balance",
           icon: <ArticleOutlinedIcon />,
-          route: "abc"
+          route: "FinanceReport/TrialBalance"
         },
         {
           name: "Balance Sheet",
           icon: <DescriptionOutlinedIcon />,
-          route: "abc"
+          route: "FinanceReport/BalanceSheet"
         },
         {
           name: "Income Statement",
           icon: <ArticleOutlinedIcon />,
-          route: "abc"
+          route: "FinanceReport/IncomeStatement"
         }
       ]
     },
@@ -244,12 +280,12 @@ function ResponsiveDrawer(props) {
         {
           name: "New Award",
           icon: <EmojiEventsRoundedIcon />,
-          route: "abc"
+          route: "NewAward"
         },
         {
           name: "Award",
           icon: <EmojiEventsRoundedIcon />,
-          route: "abc"
+          route: "Award"
         }
       ],
     },
@@ -260,32 +296,32 @@ function ResponsiveDrawer(props) {
         {
           name: "Add Project",
           icon: <SettingsOutlinedIcon />,
-          route: "abc"
+          route: "AddProject"
         },
         {
           name: "All Project",
           icon: <SettingsOutlinedIcon />,
-          route: "abc"
+          route: "AllProject"
         },
         {
           name: "Team",
           icon: <SettingsOutlinedIcon />,
-          route: "abc"
+          route: "Team"
         },
         {
           name: "Task Priority",
           icon: <SettingsOutlinedIcon />,
-          route: "abc"
+          route: "TaskPriority"
         },
         {
           name: "Add Mileston",
           icon: <SettingsOutlinedIcon />,
-          route: "abc"
+          route: "AddMilestone"
         },
         {
           name: "Add Task Status",
           icon: <SettingsOutlinedIcon />,
-          route: "abc"
+          route: "AddTaskStatus"
         },
       ],
     },
@@ -296,7 +332,7 @@ function ResponsiveDrawer(props) {
         {
           name: "Company Settings",
           icon: <SettingsOutlinedIcon />,
-          route: "abc"
+          route: "CompanySettings"
         }
       ],
     }]
@@ -304,34 +340,40 @@ function ResponsiveDrawer(props) {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
+  const navigate = useNavigate()
 
-  const dropdown = (index) => {
-    setOpenDropdown(openDropdown === index ? null : index);
+  const RouteToNext = (route) => {
+    navigate(route)
   }
 
+  const dropdown = (index, item) => {
+    setOpenDropdown(openDropdown === index ? null : index);
+    item.route ? RouteToNext(item.route) : null
+  }
   const drawer = (
-    <div style={{ backgroundColor: '#344E66', color: '#d8d8d8', fontFamily: 'Poppins' }}>
+    <div style={{ backgroundColor: '#344E66', color: '#d8d8d8', fontFamily: 'poppins' }}>
       <List>
-        <h1 style={{ textAlign: 'center', fontSize: 22, fontFamily: 'Poppins', fontWeight: 'normal' }}>HRM <span style={{ color: "yellowgreen" }}>OS</span> </h1>
+        <h1 style={{ textAlign: 'center', fontSize: 23, marginTop: 25, fontFamily: 'poppins', fontWeight: 'normal' }}>HRM <span style={{ color: "yellowgreen" }}>OS</span> </h1>
         {Pages.map((x, i) => (
           <>
-            <ListItem style={{ fontFamily: 'Poppins' }} key={x.name} disablePadding>
-              <ListItemButton onClick={() => dropdown(i)}>
-                <ListItemIcon style={{ color: '#d8d8d8' }}>
+            <ListItem key={x.name} disablePadding>
+              <ListItemButton onClick={() => dropdown(i, x)}>
+                <ListItemIcon style={{ color: '#d8d8d8', fontSize: 20 }}>
                   {x.icon}
                 </ListItemIcon>
-                <ListItemText className='drawertext' style={{ marginLeft: '-20px' }} primary={x.name} />
+                {/* <Typography style={{fontFamily:"poppins",fontSize:16,marginTop:5,marginLeft:"-21px"}}>{x.name}</Typography> */}
+                <ListItemText sx={{ marginLeft: '-21px', fontFamily: "poppins" }}>{x.name}</ListItemText>
                 {(x.children && Array.isArray(x.children)) && openDropdown !== i ? <KeyboardArrowDownIcon style={{ fontSize: 22 }} /> : ((openDropdown === i && openDropdown != 0) ? <KeyboardArrowUpIcon style={{ fontSize: 22 }} /> : null)}
               </ListItemButton>
             </ListItem>
             {openDropdown == i && Array.isArray(x.children) &&
               x.children.map((y, index) => (
-                <ListItem disablePadding>
-                  <ListItemButton>
+                <ListItem key={index} disablePadding>
+                  <ListItemButton onClick={() => RouteToNext(y.route)}>
                     <ListItemIcon style={{ color: '#d8d8d8', marginLeft: 22 }}>
                       {y.icon}
                     </ListItemIcon>
-                    <ListItemText style={{ marginLeft: '-20px' }} primary={y.name} />
+                    <ListItemText style={{ marginLeft: '-20px',fontFamily: "poppins" }}>{y.name}</ListItemText>
                   </ListItemButton>
                 </ListItem>
               ))
@@ -346,7 +388,7 @@ function ResponsiveDrawer(props) {
 
   return (
     <Box sx={{ display: 'flex' }}>
-      <CssBaseline />
+      {/* <CssBaseline />
       <AppBar
         position="fixed"
         sx={{
@@ -363,13 +405,10 @@ function ResponsiveDrawer(props) {
             onClick={handleDrawerToggle}
             sx={{ mr: 2, display: { sm: 'none' } }}
           >
-            <MenuIcon />
+            
           </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            Responsive drawer
-          </Typography>
         </Toolbar>
-      </AppBar>
+      </AppBar> */}
       <Box
         component="nav"
         sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
@@ -404,36 +443,62 @@ function ResponsiveDrawer(props) {
       </Box>
       <Box
         component="main"
-        sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
+        sx={{ flexGrow: 1,backgroundColor:'whitesmoke',height:'200%', p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
       >
         <Toolbar />
-        <Typography paragraph>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non
-          enim praesent elementum facilisis leo vel. Risus at ultrices mi tempus
-          imperdiet. Semper risus in hendrerit gravida rutrum quisque non tellus.
-          Convallis convallis tellus id interdum velit laoreet id donec ultrices.
-          Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl suscipit
-          adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra
-          nibh cras. Metus vulputate eu scelerisque felis imperdiet proin fermentum
-          leo. Mauris commodo quis imperdiet massa tincidunt. Cras tincidunt lobortis
-          feugiat vivamus at augue. At augue eget arcu dictum varius duis at
-          consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem donec massa
-          sapien faucibus et molestie ac.
-        </Typography>
-        <Typography paragraph>
-          Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper
-          eget nulla facilisi etiam dignissim diam. Pulvinar elementum integer enim
-          neque volutpat ac tincidunt. Ornare suspendisse sed nisi lacus sed viverra
-          tellus. Purus sit amet volutpat consequat mauris. Elementum eu facilisis
-          sed odio morbi. Euismod lacinia at quis risus sed vulputate odio. Morbi
-          tincidunt ornare massa eget egestas purus viverra accumsan in. In hendrerit
-          gravida rutrum quisque non tellus orci ac. Pellentesque nec nam aliquam sem
-          et tortor. Habitant morbi tristique senectus et. Adipiscing elit duis
-          tristique sollicitudin nibh sit. Ornare aenean euismod elementum nisi quis
-          eleifend. Commodo viverra maecenas accumsan lacus vel facilisis. Nulla
-          posuere sollicitudin aliquam ultrices sagittis orci a.
-        </Typography>
+        <Routes>
+          {/* admindashboard */}
+          <Route path="dashboard" element={<Admindashboard />} />
+          {/* Accounts */}
+          <Route path="Account" element={<Account />} />
+          <Route path="Accounts/NewTransaction" element={<NewTransaction />} />
+          <Route path="Accounts/TransactionList" element={<TransactionList />} />
+          {/* Announcement  */}
+          <Route path="Announcement" element={<Announcement />} />
+          {/* Attendance  */}
+          <Route path="Attendance" element={<Attendance />} />
+          <Route path="MyAttendance" element={<MyAttendance />} />
+          {/* Awards */}
+          <Route path="Award" element={<Award />} />
+          <Route path="NewAward" element={<NewAward />} />
+          {/* Employement */}
+          <Route path="Employement/Status" element={<Status />} />
+          {/* FinanceReport */}
+          <Route path="FinanceReport/BalanceSheet" element={<BalanceSheet />} />
+          <Route path="FinanceReport/IncomeStatement" element={<IncomeStatement />} />
+          <Route path="FinanceReport/TrialBalance" element={<TrialBalance />} />
+          {/* Holiday */}
+          <Route path="Holiday/PublicHoliday" element={<PublicHoliday />} />
+          <Route path="Holiday/WeeklyHoliday" element={<WeeklyHoliday />} />
+          {/* HR */}
+          <Route path="Department" element={<Department />} />
+          <Route path="Designation" element={<Designation />} />
+          <Route path="EmployeeList" element={<EmployeeList />} />
+          <Route path="NewEmployee" element={<NewEmployee />} />
+          <Route path="RoleAndPermission" element={<RoleAndPermission />} />
+          {/* Leave */}
+          <Route path="LeaveStatus" element={<LeaveStatus />} />
+          <Route path="MyLeaves" element={<MyLeaves />} />
+          <Route path="NewLeave" element={<NewLeave />} />
+          {/* Leave Policy */}
+          <Route path="LeavePolicy" element={<LeavePolicy />} />
+
+          {/* Payroll */}
+          <Route path="CalculatePayroll" element={<CalculatePayroll />} />
+          <Route path="PayslipList" element={<PayslipList />} />
+          {/* Project */}
+          <Route path="AddMilestone" element={<AddMilestone />} />
+          <Route path="AddProject" element={<AddProject />} />
+          <Route path="AddTaskStatus" element={<AddTaskStatus />} />
+          <Route path="AllProject" element={<AllProject />} />
+          <Route path="TaskPriority" element={<TaskPriority />} />
+          <Route path="Team" element={<Team />} />
+          {/* Setting */}
+          <Route path="CompanySettings" element={<CompanySettings />} />
+          {/* Shift */}
+          <Route path="Shift" element={<Shift />} />
+
+        </Routes>
       </Box>
     </Box>
   );
