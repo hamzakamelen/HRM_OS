@@ -1,7 +1,7 @@
 import React from 'react'
 import './HR.css'
 import BAGrid from '../../components/BSGrid';
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
 const EmployeeList = () => {
   const users = [
@@ -10,7 +10,10 @@ const EmployeeList = () => {
     {id:1, name: "Hamza Kamelen", username: "1234567890",designation: "1234567890",eStatus: "1234567890",department: "1234567890", shift: "1234567890",action: "1234567890" },
     {id:1, name: "Hamza Kamelen", username: "1234567890",designation: "1234567890",eStatus: "1234567890",department: "1234567890", shift: "1234567890",action: "1234567890" },
     {id:1, name: "Hamza Kamelen", username: "1234567890",designation: "1234567890",eStatus: "1234567890",department: "1234567890", shift: "1234567890",action: "1234567890" },
-    {id:1, name: "Hamza Kamelen", username: "1234567890",designation: "1234567890",eStatus: "1234567890",department: "1234567890", shift: "1234567890",action: "1234567890" }
+    {id:1, name: "Hamza Kamelen", username: "1234567890",designation: "1234567890",eStatus: "1234567890",department: "1234567890", shift: "1234567890",action: "1234567890" },
+    {id:1, name: "Hamza Kamelen", username: "1234567890",designation: "1234567890",eStatus: "1234567890",department: "1234567890", shift: "1234567890",action: "1234567890" },
+    {id:1, name: "Hamza Kamelen", username: "1234567890",designation: "1234567890",eStatus: "1234567890",department: "1234567890", shift: "1234567890",action: "1234567890" },
+  
   ];
 
   const cols = [
@@ -56,6 +59,10 @@ const EmployeeList = () => {
   <BAGrid datasource={users} gridCols={cols} />
   </Box>    
   </Box>
+  <Box>
+    <Typography style={{fontFamily:'poppins',marginTop:85,textAlign:'center'}}>2023 Omega Solution One stop solution.</Typography>
+  </Box>
+
     </>
   )
 }
