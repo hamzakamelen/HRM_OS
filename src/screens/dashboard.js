@@ -362,7 +362,7 @@ function ResponsiveDrawer(props) {
                   {x.icon}
                 </ListItemIcon>
                 {/* <Typography style={{fontFamily:"poppins",fontSize:16,marginTop:5,marginLeft:"-21px"}}>{x.name}</Typography> */}
-                <ListItemText><Typography style={{ marginLeft: '-21px', fontFamily: "poppins",fontSize:15 }}>{x.name}</Typography></ListItemText>
+                <ListItemText><Typography style={{ marginLeft: '-21px', fontFamily: "poppins",fontSize:14 }}>{x.name}</Typography></ListItemText>
                 {(x.children && Array.isArray(x.children)) && openDropdown !== i ? <KeyboardArrowDownIcon style={{ fontSize: 22 }} /> : ((openDropdown === i && openDropdown != 0) ? <KeyboardArrowUpIcon style={{ fontSize: 22 }} /> : null)}
               </ListItemButton>
             </ListItem>
@@ -373,7 +373,7 @@ function ResponsiveDrawer(props) {
                     <ListItemIcon style={{ color: '#d8d8d8', marginLeft: 22 }}>
                       {y.icon}
                     </ListItemIcon>
-                    <ListItemText style={{ marginLeft: '-20px',fontFamily: "poppins" }}>{y.name}</ListItemText>
+                <ListItemText><Typography style={{ marginLeft: '-20px', fontFamily: "poppins",fontSize:14 }}>{y.name}</Typography></ListItemText>
                   </ListItemButton>
                 </ListItem>
               ))

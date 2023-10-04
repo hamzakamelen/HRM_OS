@@ -6,11 +6,11 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 const Department = () => {
   const users = [
-    { id: 1, name: "Hamza Kamelen", username: "1234567890", designation: "1234567890", eStatus: "1234567890", department: "1234567890", shift: "1234567890", action: "1234567890" },
-    { id: 1, name: "Hamza Kamelen", username: "1234567890", designation: "1234567890", eStatus: "1234567890", department: "1234567890", shift: "1234567890", action: "1234567890" },
-    { id: 1, name: "Hamza Kamelen", username: "1234567890", designation: "1234567890", eStatus: "1234567890", department: "1234567890", shift: "1234567890", action: "1234567890" },
-    { id: 1, name: "Hamza Kamelen", username: "1234567890", designation: "1234567890", eStatus: "1234567890", department: "1234567890", shift: "1234567890", action: "1234567890" },
-    { id: 1, name: "Hamza Kamelen", username: "1234567890", designation: "1234567890", eStatus: "1234567890", department: "1234567890", shift: "1234567890", action: "1234567890" },
+    { id: 1, name: "Hamza Kamelen", CreatedAt: "1234567890", action: "1234567890" },
+    { id: 1, name: "Hamza Kamelen", CreatedAt: "1234567890", action: "1234567890" },
+    { id: 1, name: "Hamza Kamelen", CreatedAt: "1234567890", action: "1234567890" },
+    { id: 1, name: "Hamza Kamelen", CreatedAt: "1234567890", action: "1234567890" },
+    { id: 1, name: "Hamza Kamelen", CreatedAt: "1234567890", action: "1234567890" },
   ];
 
   const cols = [
@@ -24,24 +24,8 @@ const Department = () => {
 
     },
     {
-      label: "User Name",
-      key: "username",
-    },
-    {
-      label: "Designation",
-      key: "designation",
-    },
-    {
-      label: "E-Status",
-      key: "eStatus",
-    },
-    {
-      label: "Department",
-      key: "department",
-    },
-    {
-      label: "Shift",
-      key: "shift",
+      label: "Created At",
+      key: "CreatedAt",
     },
     {
       label: "Action",

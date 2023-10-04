@@ -1,18 +1,18 @@
-import { Box, Typography } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
 import React from 'react'
 import BAGrid from '../../components/BSGrid';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 const MyAttendance = () => {
   const users = [
-    { id: 1, name: "Hamza Kamelen", username: "1234567890", designation: "1234567890", eStatus: "1234567890", department: "1234567890", shift: "1234567890", action: "1234567890" },
-    { id: 1, name: "Hamza Kamelen", username: "1234567890", designation: "1234567890", eStatus: "1234567890", department: "1234567890", shift: "1234567890", action: "1234567890" },
-    { id: 1, name: "Hamza Kamelen", username: "1234567890", designation: "1234567890", eStatus: "1234567890", department: "1234567890", shift: "1234567890", action: "1234567890" },
-    { id: 1, name: "Hamza Kamelen", username: "1234567890", designation: "1234567890", eStatus: "1234567890", department: "1234567890", shift: "1234567890", action: "1234567890" },
-    { id: 1, name: "Hamza Kamelen", username: "1234567890", designation: "1234567890", eStatus: "1234567890", department: "1234567890", shift: "1234567890", action: "1234567890" },
-    { id: 1, name: "Hamza Kamelen", username: "1234567890", designation: "1234567890", eStatus: "1234567890", department: "1234567890", shift: "1234567890", action: "1234567890" },
-    { id: 1, name: "Hamza Kamelen", username: "1234567890", designation: "1234567890", eStatus: "1234567890", department: "1234567890", shift: "1234567890", action: "1234567890" },
-    { id: 1, name: "Hamza Kamelen", username: "1234567890", designation: "1234567890", eStatus: "1234567890", department: "1234567890", shift: "1234567890", action: "1234567890" },
+    { id: 1, name: "Hamza Kamelen", inTime: "22-10-2023, 12:00 AM", outTime: "22-10-2023, 12:00 AM", inStatus:<Button>LATE</Button>, outStatus: "EARLY",PunchBy: "Hamza Tech", TotalHour:12  },
+    { id: 1, name: "Hamza Kamelen", inTime: "22-10-2023, 12:00 AM", outTime: "22-10-2023, 12:00 AM", inStatus: "LATE", outStatus: "NONE", PunchBy: "Hamza Tech", TotalHour:12  },
+    { id: 1, name: "Hamza Kamelen", inTime: "22-10-2023, 12:00 AM", outTime: "22-10-2023, 12:00 AM", inStatus: "LATE", outStatus: "NONE", PunchBy: "Hamza Tech", TotalHour:12  },
+    { id: 1, name: "Hamza Kamelen", inTime: "22-10-2023, 12:00 AM", outTime: "22-10-2023, 12:00 AM", inStatus: "LATE", outStatus: "NONE", PunchBy: "Hamza Tech", TotalHour:12  },
+    { id: 1, name: "Hamza Kamelen", inTime: "22-10-2023, 12:00 AM", outTime: "22-10-2023, 12:00 AM", inStatus: "NONE", outStatus: "NONE", PunchBy: "Hamza Tech", TotalHour:12  },
+    { id: 1, name: "Hamza Kamelen", inTime: "22-10-2023, 12:00 AM", outTime: "22-10-2023, 12:00 AM", inStatus: "LATE", outStatus: "NONE", PunchBy: "Hamza Tech", TotalHour:12  },
+    { id: 1, name: "Hamza Kamelen", inTime: "22-10-2023, 12:00 AM", outTime: "22-10-2023, 12:00 AM", inStatus: "LATE", outStatus: "NONE", PunchBy: "Hamza Tech", TotalHour:12  },
+    { id: 1, name: "Hamza Kamelen", inTime: "22-10-2023, 12:00 AM", outTime: "22-10-2023, 12:00 AM", inStatus: "LATE", outStatus: "NONE", PunchBy: "Hamza Tech", TotalHour:12  },
 
   ];
 
@@ -27,28 +27,28 @@ const MyAttendance = () => {
 
     },
     {
-      label: "User Name",
-      key: "username",
+      label: "inTime",
+      key: "inTime",
     },
     {
-      label: "Designation",
-      key: "designation",
+      label: "outTime",
+      key: "outTime",
     },
     {
-      label: "E-Status",
-      key: "eStatus",
+      label: "In Status",
+      key: "inStatus",
     },
     {
-      label: "Department",
-      key: "department",
+      label: "Out Status",
+      key: "outStatus",
     },
     {
-      label: "Shift",
-      key: "shift",
+      label: "Punch By",
+      key: "PunchBy",
     },
     {
-      label: "Action",
-      key: "action",
+      label: "Total Hour",
+      key: "TotalHour",
     }
   ];
 
