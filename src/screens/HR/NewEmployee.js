@@ -212,7 +212,7 @@ const NewEmployee = () => {
                 <Typography style={{ color: 'red', margin: 2 }}>*</Typography>
                 <Typography variant='p'>
                   Designation:
-                  <select style={{height:35}} name="bloodgroup" id="dropdown">
+                  <select style={{height:35}} name="designation" id="dropdown">
                     <option selected>Select Designation</option>
                     <option value="CEO">CEO</option>
                     <option value="CFO">CFO</option>

@@ -74,7 +74,7 @@ import PublicHoliday from './Holiday/PublicHoliday';
 import WeeklyHoliday from './Holiday/WeeklyHoliday';
 
 
-const drawerWidth = 250;
+const drawerWidth = 222;
 
 function ResponsiveDrawer(props) {
   const { window } = props;

@@ -5,14 +5,14 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 const MyAttendance = () => {
   const users = [
-    { id: 1, name: "Hamza Kamelen", inTime: "22-10-2023, 12:00 AM", outTime: "22-10-2023, 12:00 AM", inStatus:<Button>LATE</Button>, outStatus: "EARLY",PunchBy: "Hamza Tech", TotalHour:12  },
-    { id: 1, name: "Hamza Kamelen", inTime: "22-10-2023, 12:00 AM", outTime: "22-10-2023, 12:00 AM", inStatus: "LATE", outStatus: "NONE", PunchBy: "Hamza Tech", TotalHour:12  },
-    { id: 1, name: "Hamza Kamelen", inTime: "22-10-2023, 12:00 AM", outTime: "22-10-2023, 12:00 AM", inStatus: "LATE", outStatus: "NONE", PunchBy: "Hamza Tech", TotalHour:12  },
-    { id: 1, name: "Hamza Kamelen", inTime: "22-10-2023, 12:00 AM", outTime: "22-10-2023, 12:00 AM", inStatus: "LATE", outStatus: "NONE", PunchBy: "Hamza Tech", TotalHour:12  },
-    { id: 1, name: "Hamza Kamelen", inTime: "22-10-2023, 12:00 AM", outTime: "22-10-2023, 12:00 AM", inStatus: "NONE", outStatus: "NONE", PunchBy: "Hamza Tech", TotalHour:12  },
-    { id: 1, name: "Hamza Kamelen", inTime: "22-10-2023, 12:00 AM", outTime: "22-10-2023, 12:00 AM", inStatus: "LATE", outStatus: "NONE", PunchBy: "Hamza Tech", TotalHour:12  },
-    { id: 1, name: "Hamza Kamelen", inTime: "22-10-2023, 12:00 AM", outTime: "22-10-2023, 12:00 AM", inStatus: "LATE", outStatus: "NONE", PunchBy: "Hamza Tech", TotalHour:12  },
-    { id: 1, name: "Hamza Kamelen", inTime: "22-10-2023, 12:00 AM", outTime: "22-10-2023, 12:00 AM", inStatus: "LATE", outStatus: "NONE", PunchBy: "Hamza Tech", TotalHour:12  },
+    { id: 1, name: "Hamza Kamelen", inTime: "22-10-2023, 12:00 AM", outTime: "22-10-2023, 12:00 AM", inStatus: <Button sx={{ border: 1, height: 23, borderColor: 'red', color: 'red' }}>LATE</Button>, outStatus: <Button sx={{ border: 1, height: 23, borderColor: 'blue', color: 'blue' }}>EARLY</Button>, PunchBy: "Hamza Tech", TotalHour: 12 },
+    { id: 1, name: "Hamza Kamelen", inTime: "22-10-2023, 12:00 AM", outTime: "22-10-2023, 12:00 AM", inStatus: <Button sx={{ border: 1, height: 23, borderColor: 'red', color: 'red' }}>LATE</Button>, outStatus: <Button sx={{ border: 1, height: 23, borderColor: 'grey', color: 'green' }}>NONE</Button>, PunchBy: "Hamza Tech", TotalHour: 12 },
+    { id: 1, name: "Hamza Kamelen", inTime: "22-10-2023, 12:00 AM", outTime: "22-10-2023, 12:00 AM", inStatus: <Button sx={{ border: 1, height: 23, borderColor: 'red', color: 'red' }}>LATE</Button>, outStatus: <Button sx={{ border: 1, height: 23, borderColor: 'grey', color: 'green' }}>NONE</Button>, PunchBy: "Hamza Tech", TotalHour: 12 },
+    { id: 1, name: "Hamza Kamelen", inTime: "22-10-2023, 12:00 AM", outTime: "22-10-2023, 12:00 AM", inStatus: <Button sx={{ border: 1, height: 23, borderColor: 'red', color: 'red' }}>LATE</Button>, outStatus: <Button sx={{ border: 1, height: 23, borderColor: 'grey', color: 'green' }}>NONE</Button>, PunchBy: "Hamza Tech", TotalHour: 12 },
+    { id: 1, name: "Hamza Kamelen", inTime: "22-10-2023, 12:00 AM", outTime: "22-10-2023, 12:00 AM", inStatus: <Button sx={{ border: 1, height: 23, borderColor: 'grey', color: 'green' }}>NONE</Button>,outStatus: <Button sx={{ border: 1, height: 23, borderColor: 'grey', color: 'green' }}>NONE</Button>, PunchBy: "Hamza Tech", TotalHour: 12 },
+    { id: 1, name: "Hamza Kamelen", inTime: "22-10-2023, 12:00 AM", outTime: "22-10-2023, 12:00 AM", inStatus: <Button sx={{ border: 1, height: 23, borderColor: 'red', color: 'red' }}>LATE</Button>, outStatus: <Button sx={{ border: 1, height: 23, borderColor: 'grey', color: 'green' }}>NONE</Button>, PunchBy: "Hamza Tech", TotalHour: 12 },
+    { id: 1, name: "Hamza Kamelen", inTime: "22-10-2023, 12:00 AM", outTime: "22-10-2023, 12:00 AM", inStatus: <Button sx={{ border: 1, height: 23, borderColor: 'red', color: 'red' }}>LATE</Button>, outStatus: <Button sx={{ border: 1, height: 23, borderColor: 'grey', color: 'green' }}>NONE</Button>, PunchBy: "Hamza Tech", TotalHour: 12 },
+    { id: 1, name: "Hamza Kamelen", inTime: "22-10-2023, 12:00 AM", outTime: "22-10-2023, 12:00 AM", inStatus: <Button sx={{ border: 1, height: 23, borderColor: 'red', color: 'red' }}>LATE</Button>, outStatus: <Button sx={{ border: 1, height: 23, borderColor: 'blue', color: 'blue' }}>EARLY</Button>, PunchBy: "Hamza Tech", TotalHour: 12 },
 
   ];
 
