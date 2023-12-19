@@ -74,7 +74,7 @@ import PublicHoliday from './Holiday/PublicHoliday';
 import WeeklyHoliday from './Holiday/WeeklyHoliday';
 
 
-const drawerWidth = 222;
+const drawerWidth = 250;
 
 function ResponsiveDrawer(props) {
   const { window } = props;
@@ -353,7 +353,7 @@ function ResponsiveDrawer(props) {
   const drawer = (
     <div style={{ backgroundColor: '#344E66', color: '#d8d8d8', fontFamily: 'poppins' }}>
       <List>
-        <h1 style={{ textAlign: 'center', fontSize: 23, marginTop: 25, fontFamily: 'poppins', fontWeight: 'normal' }}>HRM <span style={{ color: "yellowgreen" }}>OS</span> </h1>
+        <h1 style={{ textAlign: 'center', fontSize: 30, marginTop: 30, fontFamily: 'poppins', fontWeight: 'normal' }}>HRM <span style={{ color: "yellowgreen" }}>OS</span> </h1>
         {Pages.map((x, i) => (
           <>
             <ListItem key={x.name} disablePadding>
@@ -362,7 +362,7 @@ function ResponsiveDrawer(props) {
                   {x.icon}
                 </ListItemIcon>
                 {/* <Typography style={{fontFamily:"poppins",fontSize:16,marginTop:5,marginLeft:"-21px"}}>{x.name}</Typography> */}
-                <ListItemText><Typography style={{ marginLeft: '-21px', fontFamily: "poppins",fontSize:14 }}>{x.name}</Typography></ListItemText>
+                <ListItemText><Typography style={{ marginLeft: '-21px', fontFamily: "poppins",fontSize:17.4 }}>{x.name}</Typography></ListItemText>
                 {(x.children && Array.isArray(x.children)) && openDropdown !== i ? <KeyboardArrowDownIcon style={{ fontSize: 22 }} /> : ((openDropdown === i && openDropdown != 0) ? <KeyboardArrowUpIcon style={{ fontSize: 22 }} /> : null)}
               </ListItemButton>
             </ListItem>
@@ -373,7 +373,7 @@ function ResponsiveDrawer(props) {
                     <ListItemIcon style={{ color: '#d8d8d8', marginLeft: 22 }}>
                       {y.icon}
                     </ListItemIcon>
-                <ListItemText><Typography style={{ marginLeft: '-20px', fontFamily: "poppins",fontSize:14 }}>{y.name}</Typography></ListItemText>
+                <ListItemText><Typography style={{ marginLeft: '-20px', fontFamily: "poppins",fontSize:16 }}>{y.name}</Typography></ListItemText>
                   </ListItemButton>
                 </ListItem>
               ))
